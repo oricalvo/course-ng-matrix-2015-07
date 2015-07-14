@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+    <div ng-controller="HomeCtrl as ctrl">
+        <input ng-model="ctrl.num1" />
+        +
+        <input ng-model="ctrl.num2" />
+        =
+        <span>{{ctrl.result}}</span>
+
+        <p>
+            <button ng-click="ctrl.calc()">Calc</button>
+        </p>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

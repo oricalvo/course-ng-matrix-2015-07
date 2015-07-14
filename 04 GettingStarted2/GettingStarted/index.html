@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="site-menu" ng-controller="SiteMenuCtrl">
+        <ul>
+            <li>
+                <a>Help</a>
+            </li>
+            <li>
+                <a>About</a>
+            </li>
+        </ul>
+    </div>
+
+    <div ng-controller="HomeCtrl">
+        <ul>
+            <li ng-repeat="item in items">
+                <span>{{item.id}}</span>
+                <span>{{item.name}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="/lib/require.js" data-main="../app/main"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+    <div ng-controller="TabCtrl">
+
+        <ul>
+            <li ng-click="changePage('page1')">Page 1</li>
+            <li ng-click="changePage('page2')">Page 2</li>
+        </ul>
+
+        <div ng-controller="Page1Ctrl" ng-if="page=='page1'">
+            <h1>Page 1</h1>
+
+            <div>
+                <button ng-click="done()">Done</button>
+            </div>
+        </div>
+
+        <div ng-controller="Page2Ctrl" ng-if="page=='page2'">
+            <h1>Page 2</h1>
+        </div>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="TabCtrl.js"></script>
+    <script src="Page1Ctrl.js"></script>
+    <script src="Page2Ctrl.js"></script>
+</body>
+</html>

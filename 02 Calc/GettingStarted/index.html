@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <ul>
+        <li ng-repeat="item in ::items">
+            <span>{{::item.name}}</span>
+            <span>{{::item.email}}</span>
+        </li>
+    </ul>
+
+    <div ng-controller="HomeCtrl">
+        <input ng-model="num1" />
+        +
+        <input ng-model="num2" />
+        =
+        <span>{{result}}</span>
+
+        <p>
+            <button ng-click="calc()">Calc</button>
+        </p>
+    </div>
+
+
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>
