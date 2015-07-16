@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <style>
+        input {
+            outline: none;
+        }
+
+        .ng-touched.ng-invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content" ng-view>
+        angular
+    </div>
+
+    <div class="footer" ng-controller="">
+        angular
+    </div>
+
+    <div ng-controller="HomeCtrl">
+        <form name="form" novalidate>
+            Name:
+            <br />
+            <input ng-model="name" required />
+
+            <br />
+            <br />
+            E-Mail:<br />
+            <input ng-model="email" type="email" />
+
+            <br />
+            <br />
+            <button ng-click="save()">Save</button>
+        </form>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="angular-sanitize.js"></script>
+    <script src="App.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

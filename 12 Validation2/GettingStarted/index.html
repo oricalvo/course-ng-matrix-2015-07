@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <style>
+        input {
+            outline: none;
+        }
+
+        .ng-touched.ng-invalid {
+            border: 2px solid red;
+        }
+
+        .validation-error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div ng-controller="HomeCtrl">
+        <form name="form" novalidate>
+            Name:
+            <br />
+            <input ng-model="name" name="name" required minlength="5" />
+            <span class="validation-error" ng-show="vf.name">Please specify a name</span>
+
+            <span ng-show="form.name.$error.minlength">Too short</span>
+
+            <br />
+            <br />
+            E-Mail:<br />
+            <input ng-model="email" type="email" name="email" required />
+            <span class="validation-error" ng-show="vf.email.required">Please specify an email</span>
+            <span class="validation-error" ng-show="vf.email.email">Please specify a valid email</span>
+
+            <br />
+            <br />
+            <button ng-click="save()">Save</button>
+        </form>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="angular-sanitize.js"></script>
+    <script src="App.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>
