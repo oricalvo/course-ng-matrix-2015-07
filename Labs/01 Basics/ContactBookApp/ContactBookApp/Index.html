@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div data-view="BookView">
+        <div class="header">
+            <span class="title">
+                Contact Book
+            </span>
+            <div class="menu">
+                <span class="add-contact" data-bind="click: addContact">
+                    New Contact
+                </span>
+                <span class="add-group" data-bind="click: addGroup">
+                    New Group
+                </span>
+            </div>
+        </div>
+
+        <div class="content">
+            <ul class="items-view" data-view="ItemsView" data-bind="foreach: items">
+                <li data-bind="click: $root.itemActivated">
+                    <div class="selection">
+                        <input type="checkbox" data-bind="click: $root.itemSelected, clickBubble: false" />
+                    </div>
+                    <span class="title" data-bind="text: $root.getTitle($data)"></span>
+                    <span class="sub-title" data-bind="text: $root.getSubTitle($data)"></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <span class="copyright">&copy; 2012 Contact Book</span>
+        </div>
+    </div>
+
+    <script src="/Scripts/Lib/jquery.js" type="text/javascript"></script>
+    <script src="/Scripts/Lib/knockout.js" type="text/javascript"></script>
+
+    <script src="/Scripts/Common/Extensions.js" type="text/javascript"></script>
+    <script src="/Scripts/Common/Logger.js" type="text/javascript"></script>
+
+    <script src="/Scripts/Models/BookItem.js" type="text/javascript"></script>
+    <script src="/Scripts/Models/Contact.js" type="text/javascript"></script>
+    <script src="/Scripts/Models/Group.js" type="text/javascript"></script>
+    <script src="/Scripts/Models/Book.js" type="text/javascript"></script>
+
+    <script src="/Scripts/Views/ItemsView.js" type="text/javascript"></script>
+    <script src="/Scripts/Views/BookView.js" type="text/javascript"></script>
+
+    <script src="/Scripts/App/App.js" type="text/javascript"></script>
+</body>
+</html>
