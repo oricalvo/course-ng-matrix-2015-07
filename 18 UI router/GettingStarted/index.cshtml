@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div ng-controller="SiteMenuCtrl">
+        <a href="/#/home/view1">Home</a>
+        <a href="/#/about">About</a>
+    </div>
+
+    <div ui-view></div>
+
+    <script type="text/ng-template" id="Home.html">
+        <div>
+            <h1>{{title}}</h1>
+
+            <ul>
+                <li ng-repeat="contact in contacts">
+                    <span>{{contact.name}}</span>
+                </li>
+            </ul>
+
+            <div ui-view></div>
+        </div>
+    </script>
+
+    <script src="angular.js"></script>
+    <script src="angular-ui-router.js"></script>
+
+    <script src="App.js"></script>
+
+    <script src="ContactService.js"></script>
+
+    <script src="HomeCtrl.js"></script>
+    <script src="AboutCtrl.js"></script>
+    <script src="View1Ctrl.js"></script>
+    <script src="SiteMenuCtrl.js"></script>
+</body>
+</html>

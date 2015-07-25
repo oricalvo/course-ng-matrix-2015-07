@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div ng-controller="HomeCtrl">
+        <div class="menu">
+            <a href="/#/page1">Page 1</a>
+            <a href="/#/page2">Page 2</a>
+        </div>
+
+        <div ng-show="page=='/page1'">
+            <h1>Page 1</h1>
+        </div>
+
+        <div ng-show="page=='/page2'">
+            <h1>Page 2</h1>
+        </div>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="angular-sanitize.js"></script>
+    <script src="App.js"></script>
+    <script src="ContactService.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

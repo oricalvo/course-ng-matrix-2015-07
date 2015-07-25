@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <!--<clock name="clocks.clock1" timezone="tn" on-tick="onClockTick(time)"></clock>
+
+        <clock name="clocks.clock2" timezone="tn" on-tick="onClockTick(time)"></clock>-->
+
+        <button ng-click="stop()">Stop</button>
+        <button ng-click="start()">Start</button>
+
+        <input ng-model="componentType" />
+        <button ng-click="createComponent()">Create Component</button>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="ClockComponent.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>
